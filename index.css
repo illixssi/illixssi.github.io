@@ -1,92 +1,48 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    height: 100vh;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-nav ul li {
-    margin: 1vh 2vw;
-}
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-section {
-    margin-bottom: 0;
-}
-
-h1,
-h2 {
-    margin-bottom: 1vh;
-}
-
-.highlight {
-    background-color: #b5b5b5;
-    padding: 0.5vw;
-    border-radius: 1vw;
-    text-align: center;
-}
-
-:root {
-    --header-height: 8vh;
-    --footer-height: 8vh;
-}
-
-header {
-    height: var(--header-height);
-    background: #333333;
-    color: #ffffff;
-    padding: 1vh 0;
-}
-
-footer {
-    height: var(--footer-height);
-    background: #333333;
-    color: #ffffff;
-    text-align: center;
-    padding: 1vh 0;
+.home-carousel {
     position: relative;
     width: 100%;
+    height: calc(100vh - var(--header-height) - var(--footer-height));
+    overflow: hidden;
 }
 
-.text-center {
-    text-align: center;
+.home-carousel-inner {
+    display: flex;
+    transition: transform 1s ease;
+    height: 100%;
 }
 
-hr {
+.home-carousel-item {
+    min-width: 100%;
+}
+
+.home-carousel-item img {
     width: 100%;
-    height: 0.3vw;
-    background-color: #333333;
-    border: none;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1vw;
+    border-radius: 1vw;
+}
+
+.home-carousel-caption {
+    font-size: 1.8vw;
 }
 
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
+    .home-carousel-item img {
+        height: 100%;
     }
 
-    nav ul li {
-        margin: 0.5vh 0;
-    }
-
-    :root {
-        --header-height: 10vh;
-        --footer-height: 8vh;
+    .home-carousel-caption {
+        font-size: 4vw;
     }
 }
