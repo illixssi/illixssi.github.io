@@ -5,7 +5,118 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Seating Plan - Youth GPPK Cinema</title>
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #ff8c00;
+        }
+
+        .legend {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .legend div {
+            margin: 0 10px;
+        }
+
+        .legend span {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .available {
+            background-color: lightgreen;
+        }
+
+        .unavailable {
+            background-color: red;
+        }
+
+        .seating-chart {
+            display: inline-block;
+            text-align: left;
+        }
+
+        .screen-container {
+            display: flex;
+            justify-content: space-between;
+            width: 96%;
+        }
+
+        .main-screen {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 40%;
+        }
+
+        .mini-screen {
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+            width: 15%;
+            font-size: 14px;
+        }
+
+        .rows {
+            display: grid;
+            grid-template-columns: auto repeat(10, 1fr);
+            gap: 5px;
+        }
+
+        .label-rows {
+            display: grid;
+            grid-template-columns: auto repeat(0, 1fr);
+            gap: 5px;
+        }
+
+        .row {
+            display: contents;
+        }
+
+        .row span {
+            display: block;
+            text-align: left;
+            padding-left: 10px;
+            font-weight: bold;
+            margin: auto;
+        }
+
+        .seat {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            cursor: pointer;
+        }
+
+        .seat.available:hover {
+            background-color: #ccc;
+        }
+
+        .ghost {
+            visibility: hidden;
+        }
+
+        .seating-chart-rows-container {
+            display: flex;
+            justify-content: center;
+        }
+    </style>
 </head>
 
 <body>
@@ -92,7 +203,19 @@
             </div>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        document.querySelectorAll('.seat').forEach(seat => {
+            seat.addEventListener('click', () => {
+                if (seat.classList.contains('available')) {
+                    seat.classList.remove('available');
+                    seat.classList.add('unavailable');
+                } else if (seat.classList.contains('unavailable')) {
+                    seat.classList.remove('unavailable');
+                    seat.classList.add('available');
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
