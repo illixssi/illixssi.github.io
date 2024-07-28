@@ -4,55 +4,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Felix - Indonesian Tourism</title>
-    <link rel="stylesheet" href="./global.css">
-    <link rel="stylesheet" href="./index.css">
-    <link rel="icon" href="./tourism.png" type="image/x-icon">
+    <title>Seating Plan - Youth GPPK Cinema</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="./culture/culture.html">Culture</a></li>
-                <li><a href="./destinations/destinations.html">Destinations</a></li>
-                <li><a href="./hotels/hotels.html">Hotels</a></li>
-                <li><a href="./contact_booking/contact_booking.html">Contact & Booking</a></li>
-            </ul>
-        </nav>
-    </header>
-    <section id="home-section">
-        <div class="home-carousel">
-            <div class="home-carousel-inner">
-                <div class="home-carousel-item"><img
-                        src="https://images.unsplash.com/photo-1596402184320-417e7178b2cd?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image 1"></div>
-                <div class="home-carousel-item"><img
-                        src="https://images.unsplash.com/photo-1691549426935-1fa2699f9575?q=80&w=3774&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image 2"></div>
-                <div class="home-carousel-item"><img
-                        src="https://images.unsplash.com/photo-1718127465066-cb75b9849e3d?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image 3"></div>
-                <div class="home-carousel-item"><img
-                        src="https://images.unsplash.com/photo-1616388601193-a1b31d70905a?q=80&w=3870&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image 4"></div>
-                <div class="home-carousel-item"><img
-                        src="https://images.unsplash.com/photo-1668601755849-0994120c0083?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                        alt="Image 5"></div>
+    <h1>SEATING PLAN - YOUTH GPPK CINEMA</h1>
+    <h2>"NOBAR : A WEEK AWAY" - 28 JULI 2024</h2>
+    <div class="legend">
+        <div><span class="available"></span>Available / Tersedia</div>
+        <div><span class="unavailable"></span>Unavailable / Tidak Tersedia</div>
+    </div>
+    <div class="seating-chart">
+        <div class="screen-container">
+            <div class="mini-screen">SCREEN 1</div>
+            <div class="main-screen">MAIN SCREEN</div>
+            <div class="mini-screen">SCREEN 2</div>
+        </div>
+        <div class="seating-chart-rows-container">
+            <div class="rows">
+                <div class="row">
+                    <button class="seat available">1</button>
+                    <button class="seat available">2</button>
+                    <button class="seat available">3</button>
+                    <button class="seat available">4</button>
+                    <button class="seat available">5</button>
+                    <button class="seat available ghost">11</button>
+                    <button class="seat available">6</button>
+                    <button class="seat available">7</button>
+                    <button class="seat available">8</button>
+                    <button class="seat available">9</button>
+                    <button class="seat available">10</button>
+                </div>
+                <div class="row">
+                    <button class="seat available">1</button>
+                    <button class="seat available">2</button>
+                    <button class="seat available">3</button>
+                    <button class="seat available">4</button>
+                    <button class="seat available">5</button>
+                    <button class="seat available ghost">11</button>
+                    <button class="seat available">6</button>
+                    <button class="seat available">7</button>
+                    <button class="seat available">8</button>
+                    <button class="seat available">9</button>
+                    <button class="seat available">10</button>
+                </div>
+                <div class="row">
+                    <button class="seat available">1</button>
+                    <button class="seat available">2</button>
+                    <button class="seat available">3</button>
+                    <button class="seat available">4</button>
+                    <button class="seat available">5</button>
+                    <button class="seat available">6</button>
+                    <button class="seat available">7</button>
+                    <button class="seat available">8</button>
+                    <button class="seat available">9</button>
+                    <button class="seat available">10</button>
+                    <button class="seat available">11</button>
+                </div>
+                <div class="row">
+                    <button class="seat available">1</button>
+                    <button class="seat available">2</button>
+                    <button class="seat available">3</button>
+                    <button class="seat available">4</button>
+                    <button class="seat available">5</button>
+                    <button class="seat available">6</button>
+                    <button class="seat available">7</button>
+                    <button class="seat available">8</button>
+                    <button class="seat available">9</button>
+                    <button class="seat available">10</button>
+                    <button class="seat available">11</button>
+                </div>
             </div>
-            <div class="home-carousel-caption">
-                <h1>Welcome to Indonesian Tourism</h1>
-                <p>Discover the beauty and cultural richness of Indonesia</p>
+            <div class="label-rows">
+                <div class="row">
+                    <span>D</span>
+                </div>
+                <div class="row">
+                    <span>C</span>
+                </div>
+                <div class="row">
+                    <span>B</span>
+                </div>
+                <div class="row">
+                    <span>A</span>
+                </div>
             </div>
         </div>
-    </section>
-    <footer>
-        <p>FELIX - 211011450142 - 05TPLE001</p>
-        <p>&copy; 2024 Indonesian Tourism. All Rights Reserved.</p>
-    </footer>
-    <script src="./global.js"></script>
-    <script src="./index.js"></script>
+    </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
